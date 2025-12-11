@@ -51,11 +51,11 @@ def test_master_has_minimal_expected_columns():
     assert not missing, f"Missing expected columns: {missing}"
 
 
-def test_years_covered_2022_to_2025():
+def test_years_covered_2007_to_2025():
     """We expect to cover at least 2022–2025 in the master data."""
     df = _load_master()
     years = set(df["year"].unique())
-    for year in [2022, 2023, 2024, 2025]:
+    for year in [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]:
         assert year in years, f"Year {year} missing from master_player_seasons.csv"
 
 
